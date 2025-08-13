@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register here</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background-image: url(photos/bg/b4.jpg);
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(1px);
+            gap: 40px;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.492);
+            /* Glass effect */
+            border-radius: 20px;
+            padding: 2.5rem;
+            padding-top: 70px;
+            padding-bottom: 30px;
+            width: 350px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.49);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #010000;
+            text-shadow: 1px 1px 2px #00000040;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+            color: #0e0808;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.848);
+            color: rgb(11, 8, 8);
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s ease;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .form-group input::placeholder {
+            color: #080404;
+        }
+
+        .form-group input:focus {
+            background: rgba(255, 255, 255, 0.638);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 0.9rem;
+            background: rgba(255, 255, 255, 0.25);
+            color: rgb(9, 6, 6);
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background: rgba(255, 255, 255, 0.738);
+        }
+
+        .login-container p {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #060806;
+        }
+
+        .login-container a {
+            color: #080606;
+            text-decoration: underline;
+        }
+
+        .login-container a:hover {
+            color: #040504;
+        }
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .password-wrapper input {
+            width: 100%;
+            padding-right: 2.5rem;
+            /* space for icon */
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.1rem;
+            color: rgb(10, 5, 5);
+            opacity: 0.7;
+        }
+
+        button:hover {
+            background-color: darkseagreen;
+            transition: 0.5s;
+        }
+    </style>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/release/v5.10.0/css/all.css" />
+    <script src="https://kit.fontawesome.com/9739ac5bdf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <div class="logo"><img src="photos/bike.jpg" alt="" style="border-radius: 85%;height: 50px; margin-left: 110px; margin-bottom: 
+    25px;"></div>
+        <h2>Register</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="Name">Username</label>
+                <input type="Name" id="Name" name="Name" placeholder="Enter your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="tel">Phone</label>
+                <input type="tel" id="tel" name="tel" placeholder="Enter your Number" required>
+            </div>
+            <div class="form-group password-group">
+                <label for="password">Set Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                    <span class="toggle-password" onclick="togglePassword()"><i
+                            class="fa-regular fa-eye-slash"></i></span>
+                </div>
+            </div>
+            <button type="submit"
+                style="border: 1px solid; border-radius: 13px; margin-left: 100px; padding: 10px 20px;">submit</button>
+        </form>
+        <p>Don't have an account? <a href="#">Register here</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
